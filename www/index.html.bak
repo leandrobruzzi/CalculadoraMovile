@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Calculadora LB</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="display">
+            	<div id="resultado" class="display_resultado">
+            		
+            	</div>	
+            	<div class="display_calculos">
+            		<p id="calculo"></p>
+            	</div>	
+            </div>
+            
+            <div class="botones">
+								<table class="botones">
+										<tr>
+											<td class="operador" id="division">/</td>
+											<td class="operador" id="multiplicacion">x</td>
+											<td class="operador" id="borrarSimple">
+												<img src="img/flechaIzqLong.GIF" alt="Borrar" title="Borrar" class="borrarImg" />
+											</td>
+											<td class="operador" id="borrarTodo">C</td>
+										</tr>
+										<tr>
+											<td class="numero" id="siete">7</td>
+											<td class="numero" id="ocho">8</td>
+											<td class="numero" id="nueve">9</td>
+											<td class="operador" id="resta">-</td>
+										</tr>
+										<tr>
+											<td class="numero" id="cuatro">4</td>
+											<td class="numero" id="cinco">5</td>
+											<td class="numero" id="seis">6</td>
+											<td class="operador" id="suma">+</td>
+										</tr>										
+										<tr>
+											<td class="numero" id="uno">1</td>
+											<td class="numero" id="dos">2</td>
+											<td class="numero" id="tres">3</td>
+											<td class="operador" rowspan="2" id="igual">=</td>
+										</tr>
+										<tr>
+											<td class="numero" id="cero" colspan="2">0</td>
+											<td class="operador" id="coma">,</td>
+										</tr>																				
+								</table>
+            </div>
+        </div>
+        <script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/calculadora.js"></script>
+    </body>
+</html>
