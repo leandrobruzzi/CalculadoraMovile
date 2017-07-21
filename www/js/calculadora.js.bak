@@ -5,7 +5,7 @@ var flagSuma = 0;
 var flagResta = 0;
 var flagMulti = 0;
 var flagDiv = 0;
-var flagOperador = 0;
+var flagDobleOperador = 0;
 
 function division(){
 		var calculoAux = $("#calculo").text();
@@ -56,30 +56,21 @@ $("#multiplicacion").click(function() {
 
 function suma(){
 	var calculoAux = $("#calculo").text();
-	
-	//Si otra operacion esta en curso la termino
 	if(calculoAux.indexOf("-") != -1 || calculoAux.indexOf("*") != -1 || calculoAux.indexOf("/") != -1){
 		igual();
 		flagSuma = 1;
 		$("#calculo").append("+");
-		return null;
-	}
-	
-	//Operacion Normal
-	if(flagSuma == 0){
-		//Si ya se uso un operador no lo dejo poner otro
-		if(flagOperador == 1){
-			return null;
-		}
-		flagOperador = 1
-		flagSuma = 1;
-		num1 = $("#calculo").text();
-		$("#calculo").append("+");
 	}else{
-		igual();
-		flagOperador = 1
-		flagSuma = 1;
-		$("#calculo").append("+");
+		
+		if(flagSuma == 0){
+			flagSuma = 1;
+			num1 = $("#calculo").text();
+			$("#calculo").append("+");
+		}else{
+			igual();
+			flagSuma = 1;
+			$("#calculo").append("+");
+		}
 	}
 }
 $("#suma").click(function() {
@@ -108,10 +99,10 @@ function resta(){
 }	
 $("#resta").click(function() {
 	resta();
+	flagDobleOperador = 1;
 });
 
 function igual(){
-	flagOperador = 0;
 	var calculoAux = $("#calculo").text();
 	
 	//Suma
@@ -172,6 +163,13 @@ $("#borrarSimple").click(function() {
 $("#borrarTodo").click(function() {
 	$("#calculo").html("");
 	$("#resultado").html("");
+	num1 = 0;
+	num2 = 0;
+	resultado = 0;
+	flagSuma = 0;
+	flagResta = 0;
+	flagMulti = 0;
+	flagDiv = 0;
 });
 
 $("#coma").click(function() {

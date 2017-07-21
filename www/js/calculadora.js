@@ -5,6 +5,7 @@ var flagSuma = 0;
 var flagResta = 0;
 var flagMulti = 0;
 var flagDiv = 0;
+var flagDobleOperador = 0;
 
 function division(){
 		var calculoAux = $("#calculo").text();
@@ -97,7 +98,7 @@ function resta(){
 	}	
 }	
 $("#resta").click(function() {
-	resta();
+		resta();
 });
 
 function igual(){
@@ -161,6 +162,13 @@ $("#borrarSimple").click(function() {
 $("#borrarTodo").click(function() {
 	$("#calculo").html("");
 	$("#resultado").html("");
+	num1 = 0;
+	num2 = 0;
+	resultado = 0;
+	flagSuma = 0;
+	flagResta = 0;
+	flagMulti = 0;
+	flagDiv = 0;
 });
 
 $("#coma").click(function() {
