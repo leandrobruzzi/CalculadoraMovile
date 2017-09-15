@@ -1,0 +1,6 @@
+banner
+ID de aplicación: ca-app-pub-4053363291771503~2275694960
+inter
+ID del bloque de anuncios: ca-app-pub-4053363291771503/5172007962
+
+6.2.0

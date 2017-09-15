@@ -7,9 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-admob-simple": {
+            "PACKAGE_NAME": "ar.com.calculadora"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "ar.com.calculadora"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-admob-sdklibs": {
+            "PACKAGE_NAME": "ar.com.calculadora"
+        }
+    }
 }
